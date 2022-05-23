@@ -1,23 +1,13 @@
-<h1> Text Analytics </h1>
+<h1> Map Reduce Hadoop </h1>
 
-1. Extract Sample document and apply following document preprocessing methods:
-Tokenization, POS Tagging, stop words removal, Stemming and Lemmatization.
-2. Create representation of document by calculating Term Frequency and Inverse Document
-Frequency.
-
-<h1> Data Wrangling I </h1>
-
-Perform the following operations using Python on any open source dataset (e.g., data.csv)
-1. Import all the required Python Libraries.
-2. Locate an open source data from the web (e.g., https://www.kaggle.com). Provide a clear
- description of the data and its source (i.e., URL of the web site).
-3. Load the Dataset into pandas dataframe.
-4. Data Preprocessing: check for missing values in the data using pandas isnull(), describe()
-function to get some initial statistics. Provide variable descriptions. Types of variables etc.
-Check the dimensions of the data frame.
-5. Data Formatting and Data Normalization: Summarize the types of variables by checking
-the data types (i.e., character, numeric, integer, factor, and logical) of the variables in the
-data set. If variables are not in the correct data type, apply proper type conversions.
-6. Turn categorical variables into quantitative variables in Python.
-In addition to the codes and outputs, explain every operation that you do in the above steps and
-explain everything that you do to import/read/scrape the data set.
+1) Go to Hadoop sbin
+2) start-dfs
+3) start-yarn
+4) hadoop fs -mkdir /input
+5) hadoop fs -put {file path} /input
+6) hadoop fs -ls /input
+7) hadoop dfs -cat /input/data.txt
+8) hadoop jar mapreduce_path.jar wordcount /input /output
+9) hadoop fs -cat /out/*
+10) localhost:8088
+11) localhost:9870
